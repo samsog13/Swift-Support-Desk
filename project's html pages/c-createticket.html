@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create New Ticket - SwiftSupport Desk</title>
+ <link rel="stylesheet" href="/project's css/style.css">
+</head>
+
+
+<body id="createticket">
+
+  <!-- Navbar -->
+  <nav>
+    <a href="a-landing.html">Home</a>
+    <a href="d-mytickets.html">My Tickets</a> 
+    <a href="h-faq.html">FAQs</a>
+    <a onclick="history.back()">← Back</a>
+  </nav>
+
+  <i><h1 class="heading">Create New Support Ticket</h1></i>
+ <i><p>Tell us about your issue and we'll help you resolve it!</p></i>
+
+<br>
+<br>
+
+  <!-- Create Ticket -->
+  <form action="d-mytickets.html">
+    
+    <label>Ticket Title:</label>
+    <br>
+    <input required type="text" placeholder="Example: Eras Tour ticket queue problem">
+<br>
+<br>
+    <label>Description:</label>
+    <br>
+    <textarea required rows="6" placeholder="Please describe the problem in detail..."></textarea>
+<br><br>
+    <label>Category:</label>
+    <br>
+    <select required>
+      <option value="">Select Category</option>
+      <option value="concert">Concert & Eras Tour Tickets</option>
+      <option value="merch">Merch & Vinyl Delays</option>
+      <option value="fanclub">Fan Club / Membership</option>
+      <option value="album">Album Release / Music Issues</option>
+      <option value="meet">Meet & Greet / Tour Experience</option>
+      <option value="other">Other Swiftie Matter</option>
+    </select>
+<br><br>
+    <label>Priority:</label>
+    <br>
+    <select required>
+      <option value="">Select Priority</option>
+      <option value="low">Low</option>
+      <option value="medium">Medium</option>
+      <option value="high">High</option>
+      <option value="urgent">Urgent</option>
+    </select>
+    <br><br>
+
+    <!-- Uploadin File -->
+    <label>Attach File: </label>
+    <br>
+    <input type="file">
+    <br><br>
+
+    <button  type="submit">Submit Ticket</button>
+  </form>
+
+ <i><p>After submitting, you will be able to track your ticket in My Tickets.</p></i>
+
+</body>
+</html>

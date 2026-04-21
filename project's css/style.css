@@ -1,0 +1,259 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* font */
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url('/fonts/OpenDyslexic-Regular.otf') format('opentype');
+}
+
+ /* general body */
+body {
+  font-family: 'OpenDyslexic', sans-serif;
+color: #FFAB6C;
+ text-align: center;
+}
+
+a.button, button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+width: 50%;  
+background: black;
+  color: floralwhite;
+  cursor: pointer;
+  border:  2px solid white;
+  border-radius: 13px;
+  font-size: 1.1rem;
+font-weight: bold;
+}
+button:hover{
+  background: lightgray;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.35);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* GLASS EFFECT FOR CONTENT */
+section, div  {
+  padding: 40px 20px;
+ text-align: center;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(2px);  
+  border-radius: 15px;
+  margin: 30px;
+}
+
+li {list-style-type: none;
+}
+
+header{
+  color: white;
+  
+  padding: 0px;
+  margin:50px;
+}
+
+.heading{
+  color: white;
+ text-shadow: 1px 1px orange, 2px 2px red, 3px 3px brown;
+
+}
+
+.subheading{
+  color:#0D4AFF ; 
+  
+}
+  
+  
+  
+  .paras{
+    color: #A20B0B;
+  }
+
+.issues{
+  color: #38CE36;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  backdrop-filter: blur(19px);
+}
+
+nav a {
+  color: yellow;
+  text-shadow: 1px 1px 3px darkred;
+  text-decoration: none;
+  margin-left: 10px;
+
+}
+
+input, textarea {
+  width: 60%;
+  padding: 14px;
+  margin-bottom: 20px;
+  border: 1px solid white;
+  border-radius: 10px;
+  font-size: 1rem;   }
+
+span{
+  color: white;
+}
+
+label{
+  color: antiquewhite
+}
+
+
+
+select {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+  background: white;
+  color: black;
+  
+  appearance: none;
+ 
+}
+
+
+
+
+/* landing page*/
+#landing {
+  color: white;
+background-color: black;
+  line-height: 2;
+  padding: 10px;
+  background-image:
+  url("/image/landing.jpeg");
+  background-size: contain;
+background-position: center;
+background-repeat: repeat;}
+
+.hero h2 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  margin-bottom: 15px;
+}
+
+ol {
+  max-width: 500px;
+  margin: auto;
+  text-align: left;
+}
+
+ol li {
+  margin-bottom: 20px;
+}
+
+/* login page */
+#login {
+background-image:
+  url("/image/loginpage.jpeg");
+  background-size: contain;
+background-position: center;
+background-repeat: repeat;
+}
+
+/* create ticket */
+#createticket {
+background-color: black;
+  line-height: 2;
+  padding: 10px;
+  background-image:
+  url("/image/createticket.jpeg");
+  background-size: contain;
+background-position: center;
+background-repeat: repeat;
+}
+
+/* my tickets */
+
+#mytickets {
+background-color: black;
+  line-height: 2;
+  padding: 10px;
+  background-image:
+  url("/image/mytickets.jpeg");
+  background-size: contain;
+background-position: center;
+background-repeat: repeat;
+}
+
+/* tickets details */
+#ticketdetail {
+background-color: black;
+  line-height: 2;
+  padding: 10px;
+  background-image:
+  url("/image/ticketsdetails.gif");
+  background-size: contain;
+background-position: center;
+background-repeat: repeat;
+}
+
+.details {
+  background-color: grey;
+  border-radius: 10px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  padding: 15px;
+}
+
+/* admin dashboard */
+#admin{ 
+  background-image:
+  url("/image/admin.jpeg");
+  background-size: contain;
+background-position: center;
+background-repeat: repeat;
+
+}
+
+eras {
+  background-color: black;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 20px;
+}
+
+/* faq */
+#faq {
+background-color: black;
+  line-height: 2;
+  padding: 10px;
+  background-image:
+  url("/image/faq.jpeg");
+  background-size: contain;
+background-position: center;
+background-repeat: repeat;
+}
+
+.questions{
+  color: white;
+  background-color: black ;
+  border-radius: 10px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  padding: 15px;
+}
+
+#faqcreateticket { color:green;
+text-decoration: none;
+}
+

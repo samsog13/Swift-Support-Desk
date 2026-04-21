@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - SwiftSupport Desk</title>
+ <link rel="stylesheet" href="/project's css/style.css">
+</head>
+
+<body id="admin">
+
+  <!--Nav -->
+  <nav>
+    <a href="a-landing.html">SwiftSupport Desk</a>
+    <a href="b-login.html">Logout</a>
+    <a onclick="history.back()">← Back</a>
+  </nav>
+
+<br>
+<div >
+  <h1 class="heading">Support Team Dashboard</h1>
+
+  <p class="paras">
+    Hello Admin. Here are the current tickets from users.
+  </p>
+  
+  <br /><br>
+
+  <p><strong>Total Open Tickets:</strong> 8</p>
+  
+  
+  
+  
+<br><br>
+  <h2 class="subheading">Filters</h2>
+<br>
+  <p>
+    <label>Search:</label><br>
+    <input type="text" placeholder="Search tickets">
+  </p>
+<br>
+  <p>
+    <label>Status:</label><br>
+    <select>
+      <option value="">All Status</option>
+      <option value="new">New</option>
+      <option value="open" selected>Open</option>
+      <option value="pending">Pending</option>
+      <option value="solved">Solved</option>
+    </select>
+  </p>
+<br>
+  <p>
+    <label>Category:</label><br>
+    <select>
+      <option value="">All Categories</option>
+      <option value="concert">Concert & Eras Tour</option>
+      <option value="merch">Merch & Vinyl</option>
+      <option value="fanclub">Fan Club</option>
+      <option value="album">Album</option>
+    </select>
+  </p>
+<br>
+  <p>
+    <button onclick="location.href='e-ticketdetail.html';" >Apply Filters</button>
+    <br>
+    <button onclick="location.href='e-ticketdetail.html';">Show All Tickets</button>
+  </p>
+  </div>
+  
+  
+  <div>
+<br><br>
+  <h2 class="subheading">All Tickets</h2>
+<br><br>
+  <ul>
+    <li class="eras ">
+      <p class="issues"><strong>Eras Tour Verified Fan queue crashed again</strong></p>
+      <p><span>Submitted by:</span> swiftie4Life</p>
+      <p><span>Category:</span> Concert & Eras Tour</p>
+      <p><span>Status:</span> Open</p>
+      <p><span>Priority:</span> High</p>
+      <p><span>Date:</span> April 13, 1989</p>
+      <nav><a href="e-ticketdetail.html">View details➟</a></nav>
+    </li>
+
+<br>
+
+    <li class="lover">
+      <p class="issues"><strong>Signed Lover vinyl still not delivered</strong></p>
+      <p><span>Submitted by:</span> Swiftie4Life</p>
+      <p><span>Category:</span> Merch & Vinyl</p>
+      <p><span>Status:</span> Pending</p>
+      <p><span>Priority:</span> Medium</p>
+      <p><span>Date:</span> April 19, 1989</p>
+      <nav><a href="e-ticketdetail.html">View details➟</a></nav>
+    </li>
+
+<br>
+
+    <li class="presale">
+      <p class="issues"><strong>Fan Club presale code didn’t work</strong></p>
+      <p><span>Submitted by:</span> Swiftie4Life</p>
+      <p><span>Category:</span> Fan Club</p>
+      <p><span>Status:</span> New</p>
+      <p><span>Priority:</span> Urgent</p>
+      <p><span>Date:</span> April 28, 1989</p>
+      <nav><a href ="e-ticketdetail.html">View details➟</a></nav>
+    </li>
+  </ul>
+</div>
+
+
+<footer>
+  <i>
+      <p>
+    That’s all the tickets for now.
+  </p>
+  
+  <p>As admin, you can reply to tickets and update their status.</p>
+  </i>
+</footer>
+
+</body>
+</html>

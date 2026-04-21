@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Tickets - SwiftSupport Desk</title>
+<link rel="stylesheet" href="/project's css/style.css">
+</head>
+
+<body id="mytickets">
+
+  <nav>
+    <a href="a-landing.html"> Home</a> 
+    <a href="c-createticket.html">Create Ticket</a> 
+    <a href="h-faq.html">FAQs</a>
+    <a onclick="history.back()">← Back</a>
+  </nav>
+
+<div>
+  <h1 class="heading">My Tickets</h1>
+  <i><h3>Welcome, Swiftie4Life!</h3></i>
+  <hr />
+  <p>Track your support requests across every era.</p>
+<br>
+  <h2 class="subheading">Filters</h2>
+<br />
+  
+    <input type="text" placeholder="Search tickets...">
+  
+<br><br>
+ 
+    <label>Status:</label>
+    <select>
+      <option>All</option>
+      <option>New</option>
+      <option selected>Open</option>
+      <option>Pending</option>
+      <option>Solved</option>
+    </select>
+  
+  <br><br>
+
+  
+    <label>Category:</label>
+    <select>
+      <option>All categories</option>
+      <option>Concert</option>
+      <option>Merch</option>
+      <option>Fan Club</option>
+      <option>Other</option>
+    </select>
+  </div>
+
+  <button onclick="location.href='e-ticketdetail.html';">Apply Filters</button>
+
+<div>
+  <h2 class="subheading">Tickets</h2>
+
+  <p><i>Here’s everything you’ve sent in so far. We’re on it </i></p>
+</div>
+  <div>
+    <h3 class="issues">Eras Tour Verified Fan queue crashed again</h3>
+    <p>Status: Open</p>
+    <p>Priority: High</p>
+    <p>Date: April 13, 1989</p>
+    <nav><a href="e-ticketdetail.html">View details➟</a></nav>
+  </div>
+
+  <div>
+    <h3 class="issues">Signed Lover vinyl still not delivered</h3>
+    <p>Status: Pending</p>
+    <p>Priority: Medium</p>
+    <p>Date: April 19, 1989</p>
+    <nav><a href="e-ticketdetail.html">View details➟</a></nav>
+  </div>
+
+  <div>
+    <h3 class="issues">Fan Club presale code didn’t work</h3>
+    <p>Status: New </p>
+    <p>Priority: Urgent</p>
+    <p>Date: April 28, 1989</p>
+    <nav><a href="e-ticketdetail.html">View details➟</a></nav>
+  </div>
+
+<footer>
+  <p><i>End of list… for now.</i></p>
+</footer>
+
+</body>
+</html>

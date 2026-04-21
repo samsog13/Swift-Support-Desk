@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - SwiftSupport Desk</title>
+<link rel="stylesheet" href="/project's css/style.css">
+</head>
+<body id="login">
+
+  <!-- Simp Nav-->
+  <nav>
+    <a href="a-landing.html">Home</a> 
+    <a href="h-faq.html">FAQs</a>
+    <a onclick="history.back()">← Back</a>
+
+  </nav>
+
+  <!-- Login -->
+  <i><h1 class="heading">Welcome back, Swiftie!</h1></i>
+  <i><p>Sign in to track your tickets across every era.</p></i>
+
+<br><br>
+
+  <form action="c-createticket.html">
+    <label>Username or Email:</label>
+    <br>
+    <input required type="text" placeholder="Enter Email">
+<br><br>
+    <label>Password:</label>
+    <br>
+    <input required type="password" placeholder="Enter Password">
+    <br><br>
+
+   <label>I am logging in as:</label>
+<br>
+<select id="role" required>
+  <option value="" disabled selected>Select Option</option>
+  <option value="user">Swiftie / Fan</option>
+  <option value="admin">Support Staff (Admin)</option>
+</select>
+    <br><br>
+    
+<button type="button" onclick="goToPage()">Continue</button>
+</form>
+ 
+ 
+  <footer>
+    
+  <i><p>we love taylor swift!</p></i>
+  
+  </footer>
+
+
+
+
+
+
+<script>
+  function goToPage() {
+    const role = document.getElementById("role").value;
+    
+    if (role === "user") {
+      window.location.href = "c-createticket.html";
+    } else if (role === "admin") {
+      window.location.href = "f-admindashboard.html";
+    } else {
+      alert("Please select an option");
+    }
+  }
+</script>
+
+</body>
+</html>
