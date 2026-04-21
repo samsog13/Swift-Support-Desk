@@ -15,6 +15,7 @@ body {
   font-family: 'OpenDyslexic', sans-serif;
   color: #FFAB6C;
   text-align: center;
+  margin-bottom: 80px;
 }
 
 a.button, button {
@@ -34,12 +35,41 @@ button:hover{
   background: lightgray;
 }
 
-footer {
-  padding: 20px;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.35);
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+nav {
+  display: flex;
+  width: 100%;
+  top: 0;
+  left: 0;
+  justify-content: space-between;
+  padding: 15px 30px;
+  backdrop-filter: blur(19px);
 }
+
+nav a {
+  color: yellow;
+  text-shadow: 1px 1px 3px darkred;
+  text-decoration: none;
+  margin-left: 10px;
+
+}
+
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #f5f5f5;
+  padding: 15px 10px;
+  text-align: center;
+  background: rgba(10, 10, 20, 0.85);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 13px;
+  letter-spacing: 0.4px;
+  backdrop-filter: blur(8px);
+}
+
+
 
 /* GLASS EFFECT FOR CONTENT */
 section, div  {
@@ -82,20 +112,6 @@ header{
   color: #38CE36;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 30px;
-  backdrop-filter: blur(19px);
-}
-
-nav a {
-  color: yellow;
-  text-shadow: 1px 1px 3px darkred;
-  text-decoration: none;
-  margin-left: 10px;
-
-}
 
 input, textarea {
   width: 60%;
@@ -128,7 +144,6 @@ select {
 
 
 
-
 /* landing page*/
 #landing {
   color: white;
@@ -139,7 +154,24 @@ background-color: black;
   url("landing.jpeg");
   background-size: contain;
 background-position: center;
-background-repeat: repeat;}
+background-repeat: repeat;
+  
+}
+
+strong, h3{
+  color: saddlebrown;
+text-shadow: 1px 1px 3px antiquewhite
+  
+}
+
+h2{
+  color: lightpink;
+  text-shadow: 1px 1px ghostwhite, 2px 2px floralwhite, 3px 3px antiquewhite;
+}
+
+.tv{
+  color: deepskyblue;
+}
 
 .swifties{ color: orange;
 text-shadow: 1px 1px green, 2px 2px mediumpurple, 3px 3px dodgerblue;
