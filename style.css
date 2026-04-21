@@ -137,7 +137,7 @@ background-color: black;
   line-height: 2;
   padding: 10px;
   background-image:
-  url("/image/landing.jpeg");
+  url("landing.jpeg");
   background-size: contain;
 background-position: center;
 background-repeat: repeat;}
@@ -164,7 +164,7 @@ ol li {
 /* login page */
 #login {
 background-image:
-  url("/image/loginpage.jpeg");
+  url("loginpage.jpeg");
   background-size: contain;
 background-position: center;
 background-repeat: repeat;
@@ -176,7 +176,7 @@ background-color: black;
   line-height: 2;
   padding: 10px;
   background-image:
-  url("/image/createticket.jpeg");
+  url("createticket.jpeg");
   background-size: contain;
 background-position: center;
 background-repeat: repeat;
@@ -189,7 +189,7 @@ background-color: black;
   line-height: 2;
   padding: 10px;
   background-image:
-  url("/image/mytickets.jpeg");
+  url("mytickets.jpeg");
   background-size: contain;
 background-position: center;
 background-repeat: repeat;
@@ -201,7 +201,7 @@ background-color: black;
   line-height: 2;
   padding: 10px;
   background-image:
-  url("/image/ticketsdetails.gif");
+  url("ticketsdetails.gif");
   background-size: contain;
 background-position: center;
 background-repeat: repeat;
@@ -218,7 +218,7 @@ background-repeat: repeat;
 /* admin dashboard */
 #admin{ 
   background-image:
-  url("/image/admin.jpeg");
+  url("admin.jpeg");
   background-size: contain;
 background-position: center;
 background-repeat: repeat;
@@ -238,7 +238,7 @@ background-color: black;
   line-height: 2;
   padding: 10px;
   background-image:
-  url("/image/faq.jpeg");
+  url("faq.jpeg");
   background-size: contain;
 background-position: center;
 background-repeat: repeat;
