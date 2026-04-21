@@ -8,7 +8,7 @@
 /* font */
 @font-face {
   font-family: 'OpenDyslexic';
-  src: url('/OpenDyslexic-Regular.otf') format('opentype');
+  src: url('OpenDyslexic-Regular.otf') format('opentype');
 }
 
  /* general body */
