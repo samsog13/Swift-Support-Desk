@@ -7,7 +7,19 @@
 <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body id="landing">
+
+
+<div id="introPopup">
+  <div>
+    <p>
+      A themed support desk system designed for a community (<span class="swifties">Swifties</span>), demonstrating real-world ticket workflow management and a practical issue-handling interface that reflects structured frontend development and real-world product design principles.
+     <br> <br> By... August Midnights (SamBest!)</p>
+    <button onclick="closePopup()">Got it</button>
+  </div>
+</div>
+
 
  <nav>
    <a href="b-login.html">Login</a>
@@ -98,6 +110,16 @@
 <footer>
   <p><i>... from debut to the life of a showgirl, we've got you covered..!</i></p>
 </footer>
+
+<script>
+  window.onload = function() {
+    document.getElementById("introPopup").style.display = "block";
+  };
+  
+  function closePopup() {
+    document.getElementById("introPopup").style.display = "none";
+  }
+</script>
 
 
 </body>

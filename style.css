@@ -141,6 +141,10 @@ background-color: black;
 background-position: center;
 background-repeat: repeat;}
 
+.swifties{ color: orange;
+text-shadow: 1px 1px green, 2px 2px mediumpurple, 3px 3px dodgerblue;
+  
+}
 .hero h2 {
   font-size: 2.5em;
   margin-bottom: 10px;
@@ -159,6 +163,8 @@ ol {
 ol li {
   margin-bottom: 20px;
 }
+
+
 
 /* login page */
 #login {
