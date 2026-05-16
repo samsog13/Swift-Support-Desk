@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SkillSpring</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins', sans-serif;
+    }
+
+    body{
+      background:#f7f7fb;
+      display:flex;
+      justify-content:center;
+      padding:20px;
+    }
+
+    .app{
+      width:100%;
+      max-width:430px;
+    }
+
+    /* HEADER */
+
+    .top-bar{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+
+    .logo{
+      font-size:30px;
+      font-weight:700;
+      color:#7b4dff;
+    }
+
+    .search-box{
+      flex:1;
+      background:#fff;
+      border-radius:30px;
+      padding:14px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      box-shadow:0 2px 12px rgba(0,0,0,0.05);
+    }
+
+    .search-box input{
+      border:none;
+      outline:none;
+      width:100%;
+      background:transparent;
+      font-size:15px;
+    }
+
+    /* WELCOME */
+
+    .welcome{
+      margin-top:38px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+    }
+
+    .welcome h2{
+      font-size:30px;
+      font-weight:700;
+      color:#111;
+    }
+
+    .welcome p{
+      margin-top:8px;
+      color:#666;
+      line-height:1.6;
+    }
+
+    .bell{
+      width:58px;
+      height:58px;
+      border-radius:50%;
+      background:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:24px;
+      box-shadow:0 2px 10px rgba(0,0,0,0.05);
+      flex-shrink:0;
+    }
+
+    /* STATS */
+
+    .stats{
+      margin-top:30px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+    }
+
+    .stat-card{
+      background:#fff;
+      border-radius:24px;
+      padding:20px;
+      display:flex;
+      align-items:center;
+      gap:14px;
+      border:2px solid #eee;
+    }
+
+    .stat-icon{
+      width:52px;
+      height:52px;
+      border-radius:14px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:22px;
+    }
+
+    .purple{
+      background:#ece5ff;
+      color:#7b4dff;
+    }
+
+    .green{
+      background:#ddfae7;
+      color:#20b15a;
+    }
+
+    .pink{
+      background:#ffe6ea;
+      color:#ff5a6e;
+    }
+
+    .stat-info h3{
+      font-size:30px;
+      font-weight:700;
+      color:#111;
+    }
+
+    .stat-info p{
+      color:#666;
+      font-size:15px;
+    }
+
+    /* SECTION HEADERS */
+
+    .section-header{
+      margin-top:50px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .section-header h2{
+      font-size:32px;
+      color:#111;
+    }
+
+    .view-all{
+      text-decoration:none;
+      color:#b06cff;
+      font-weight:500;
+    }
+
+    /* CONTINUE LEARNING */
+
+    .course-card{
+      background:#fff;
+      border:2px solid #e8d8ff;
+      border-radius:28px;
+      padding:22px;
+      margin-top:22px;
+    }
+
+    .course-top{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:15px;
+    }
+
+    .tag{
+      display:inline-block;
+      padding:10px 18px;
+      background:#e8e2ff;
+      color:#6d4dff;
+      border-radius:14px;
+      font-size:15px;
+      font-weight:500;
+    }
+
+    .course-title{
+      margin-top:18px;
+      font-size:27px;
+      font-weight:600;
+      line-height:1.4;
+      color:#111;
+    }
+
+    .course-desc{
+      margin-top:18px;
+      color:#666;
+      line-height:1.7;
+      font-size:15px;
+    }
+
+    .book-icon{
+      width:82px;
+      height:82px;
+      border-radius:22px;
+      background:#2f66ff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-size:34px;
+      flex-shrink:0;
+    }
+
+    .course-meta{
+      margin-top:22px;
+      display:flex;
+      justify-content:space-between;
+      font-size:15px;
+      color:#222;
+      font-weight:500;
+    }
+
+    .progress{
+      width:100%;
+      height:10px;
+      background:#ececf2;
+      border-radius:20px;
+      overflow:hidden;
+      margin-top:10px;
+    }
+
+    .progress-bar{
+      height:100%;
+      border-radius:20px;
+      background:#091338;
+    }
+
+    .half{
+      width:50%;
+    }
+
+    .full{
+      width:100%;
+    }
+
+    .btn{
+      width:100%;
+      border:none;
+      margin-top:24px;
+      padding:18px;
+      border-radius:18px;
+      background:linear-gradient(to right,#8f44ff,#2f66ff);
+      color:#fff;
+      font-size:18px;
+      font-weight:500;
+      cursor:pointer;
+    }
+
+    /* MY COURSES */
+
+    .my-course-card{
+      background:#fff;
+      border:2px solid #ead8ff;
+      border-radius:26px;
+      padding:18px;
+      margin-top:22px;
+    }
+
+    .my-course-top{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:12px;
+    }
+
+    .left-content{
+      display:flex;
+      gap:14px;
+      flex:1;
+    }
+
+    .small-book-icon{
+      width:68px;
+      height:68px;
+      background:#823df0;
+      border-radius:18px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-size:28px;
+      flex-shrink:0;
+    }
+
+    .left-content h3{
+      margin-top:12px;
+      font-size:20px;
+      font-weight:500;
+      color:#111;
+      line-height:1.5;
+    }
+
+    .completed-badge{
+      background:#22c55e;
+      color:#fff;
+      padding:8px 16px;
+      border-radius:20px;
+      font-size:14px;
+      white-space:nowrap;
+    }
+
+    .my-course-desc{
+      margin-top:18px;
+      color:#666;
+      line-height:1.6;
+      font-size:15px;
+    }
+
+    .module-text{
+      margin-top:18px;
+      color:#444;
+      font-size:15px;
+    }
+
+    .completion-text{
+      margin-top:10px;
+      font-size:15px;
+      color:#222;
+    }
+
+    /* RECENTLY VIEWED */
+
+    .recent-card{
+      background:#fff;
+      border:2px solid #ddd;
+      border-radius:24px;
+      padding:20px;
+      margin-top:22px;
+    }
+
+    .recent-top{
+      display:flex;
+      gap:16px;
+      align-items:center;
+    }
+
+    .recent-icon{
+      width:86px;
+      height:86px;
+      border-radius:20px;
+      background:#f0f0f5;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#7b4dff;
+      font-size:34px;
+      flex-shrink:0;
+    }
+
+    .recent-content{
+      flex:1;
+    }
+
+    .recent-content h3{
+      margin-top:14px;
+      font-size:20px;
+      font-weight:500;
+      color:#111;
+      line-height:1.5;
+    }
+
+    .recent-bottom{
+      margin-top:18px;
+      display:flex;
+      gap:26px;
+      color:#444;
+      font-size:15px;
+    }
+
+    /* BOTTOM NAV */
+
+    .bottom-nav{
+      margin-top:34px;
+      width:100%;
+      background:#071030;
+      border-radius:40px;
+      padding:18px 30px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .nav-item{
+      width:58px;
+      height:58px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-size:28px;
+    }
+
+    .nav-item.active{
+      background:#fff;
+      color:#7b4dff;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="app">
+
+    <!-- HEADER -->
+
+    <div class="top-bar">
+
+      <div class="logo">SkillSpring</div>
+
+      <div class="search-box">
+        <input type="text" placeholder="Search">
+        <span>🔍</span>
+      </div>
+
+    </div>
+
+    <!-- WELCOME -->
+
+    <div class="welcome">
+
+      <div>
+        <h2>Welcome back, Jin!</h2>
+        <p>Ready to continue your learning journey?</p>
+      </div>
+
+      <div class="bell">🔔</div>
+
+    </div>
+
+    <!-- STATS -->
+
+    <div class="stats">
+
+      <div class="stat-card">
+        <div class="stat-icon purple">📖</div>
+
+        <div class="stat-info">
+          <h3>4</h3>
+          <p>Active Courses</p>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon purple">📈</div>
+
+        <div class="stat-info">
+          <h3>78%</h3>
+          <p>Avg Progress</p>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon green">🏅</div>
+
+        <div class="stat-info">
+          <h3>12</h3>
+          <p>Completed</p>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon pink">⏰</div>
+
+        <div class="stat-info">
+          <h3>24h</h3>
+          <p>Study Time</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CONTINUE LEARNING -->
+
+    <div class="section-header">
+      <h2>Continue Learning</h2>
+      <a href="#" class="view-all">View all →</a>
+    </div>
+
+
+    <div class="course-card">
+
+      <div class="course-top">
+
+        <div>
+
+          <div class="tag">Web Development</div>
+
+          <div class="course-title">
+            Back End Web Development | Grey Lucas
+          </div>
+
+        </div>
+
+        <div class="book-icon">📘</div>
+
+      </div>
+
+      <p class="course-desc">
+        Learn servers, APIs, databases, authentication, and how apps work behind the scenes.
+      </p>
+
+      <div class="course-meta">
+        <span>12 modules</span>
+        <span>50%</span>
+      </div>
+
+      <div class="progress">
+        <div class="progress-bar half"></div>
+      </div>
+
+      <button class="btn">Continue Learning</button>
+
+    </div>
+
+
+    <div class="course-card">
+
+      <div class="course-top">
+
+        <div>
+
+          <div class="tag">Product Design</div>
+
+          <div class="course-title">
+            Interaction Design | John Carter
+          </div>
+
+        </div>
+
+        <div class="book-icon">📘</div>
+
+      </div>
+
+      <p class="course-desc">
+        Design animations, transitions, and micro-interactions that improve usability.
+      </p>
+
+      <div class="course-meta">
+        <span>12 modules</span>
+        <span>50%</span>
+      </div>
+
+      <div class="progress">
+        <div class="progress-bar half"></div>
+      </div>
+
+      <button class="btn">Continue Learning</button>
+
+    </div>
+
+
+    <!-- MY COURSES -->
+
+    <div class="section-header">
+      <h2>My Courses</h2>
+    </div>
+
+
+    <div class="my-course-card">
+
+      <div class="my-course-top">
+
+        <div class="left-content">
+
+          <div class="small-book-icon">📖</div>
+
+          <div>
+
+            <div class="tag">Web Development</div>
+
+            <h3>Front End Frameworks | Tim Dave</h3>
+
+          </div>
+
+        </div>
+
+        <div class="completed-badge">
+          Completed
+        </div>
+
+      </div>
+
+      <p class="my-course-desc">
+        Build modern interfaces using tools like React and component-based architecture.
+      </p>
+
+      <div class="module-text">🗂 20 modules</div>
+
+      <div class="progress">
+        <div class="progress-bar full"></div>
+      </div>
+
+      <div class="completion-text">100% complete</div>
+
+    </div>
+
+
+    <div class="my-course-card">
+
+      <div class="my-course-top">
+
+        <div class="left-content">
+
+          <div class="small-book-icon">📖</div>
+
+          <div>
+
+            <div class="tag">Product Design</div>
+
+            <h3>Wireframing | John Carter</h3>
+
+          </div>
+
+        </div>
+
+        <div class="completed-badge">
+          Completed
+        </div>
+
+      </div>
+
+      <p class="my-course-desc">
+        Planning app or website structure before adding visual design.
+      </p>
+
+      <div class="module-text">🗂 12 modules</div>
+
+      <div class="progress">
+        <div class="progress-bar full"></div>
+      </div>
+
+      <div class="completion-text">100% complete</div>
+
+    </div>
+
+
+    <div class="my-course-card">
+
+      <div class="my-course-top">
+
+        <div class="left-content">
+
+          <div class="small-book-icon">📖</div>
+
+          <div>
+
+            <div class="tag">Product Management</div>
+
+            <h3>Agile & Scrum | James Friday</h3>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <p class="my-course-desc">
+        Understanding modern teamwork and product development workflows.
+      </p>
+
+      <div class="module-text">🗂 12 modules</div>
+
+      <div class="progress">
+        <div class="progress-bar half"></div>
+      </div>
+
+      <div class="completion-text">50% complete</div>
+
+    </div>
+
+
+    <div class="my-course-card">
+
+      <div class="my-course-top">
+
+        <div class="left-content">
+
+          <div class="small-book-icon">📖</div>
+
+          <div>
+
+            <div class="tag">Cybersecurity</div>
+
+            <h3>Ethical Hacking Fundamentals | Seth Nolan</h3>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <p class="my-course-desc">
+        Discover how security professionals test systems for vulnerability.
+      </p>
+
+      <div class="module-text">🗂 12 modules</div>
+
+      <div class="progress">
+        <div class="progress-bar half"></div>
+      </div>
+
+      <div class="completion-text">50% complete</div>
+
+    </div>
+
+
+    <!-- RECENTLY VIEWED -->
+
+    <div class="section-header">
+      <h2>Recently Viewed</h2>
+    </div>
+
+
+    <div class="recent-card">
+
+      <div class="recent-top">
+
+        <div class="recent-icon">📖</div>
+
+        <div class="recent-content">
+
+          <div class="tag">Web Development</div>
+
+          <h3>Front End Frameworks | Tim Dave</h3>
+
+          <div class="recent-bottom">
+            <span>🕒 15 min</span>
+            <span>Module 1</span>
+          </div>
+
+        </div>
+
+        <div class="completed-badge">
+          Completed
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="recent-card">
+
+      <div class="recent-top">
+
+        <div class="recent-icon">📖</div>
+
+        <div class="recent-content">
+
+          <div class="tag">Data Science & Analysis</div>
+
+          <h3>Excel & Spreadsheets | Julian Lee</h3>
+
+          <div class="recent-bottom">
+            <span>🕒 20 min</span>
+            <span>Module 1</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="recent-card">
+
+      <div class="recent-top">
+
+        <div class="recent-icon">📖</div>
+
+        <div class="recent-content">
+
+          <div class="tag">Cybersecurity</div>
+
+          <h3>Cyber Threats | Margeret Thompson</h3>
+
+          <div class="recent-bottom">
+            <span>🕒 25 min</span>
+            <span>Module 2</span>
+          </div>
+
+        </div>
+
+        <div class="completed-badge">
+          Completed
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- BOTTOM NAV -->
+
+    <div class="bottom-nav">
+
+      <div class="nav-item active">🏠</div>
+      <div class="nav-item">🧭</div>
+      <div class="nav-item">🎓</div>
+      <div class="nav-item">👤</div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
